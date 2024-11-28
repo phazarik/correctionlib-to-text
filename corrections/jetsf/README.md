@@ -1,10 +1,12 @@
 ## Jet POG corrections
+
 |Correction type|File| Source file|Correction name (2018)|
 |--|--|--|--|
 |Jet Energy Correction|`jet_jec_sf.txt`|[`jet_jerc.json`](https://cms-nanoaod-integration.web.cern.ch/commonJSONSFs/summaries/JME_2018_UL_jet_jerc.html)|`Summer19UL18_V5_MC_Total_AK4PFchs`|
 |Jet Energy Resolution|`jet_jer_sf.txt`|[`jet_jerc.json`](https://cms-nanoaod-integration.web.cern.ch/commonJSONSFs/summaries/JME_2018_UL_jet_jerc.html)|`Summer19UL18_JRV2_MC_ScaleFactor_AK4PFchs`|
 |Jet pT Resolution |`jet_ptres_sf.txt`|[`jet_jerc.json`](https://cms-nanoaod-integration.web.cern.ch/commonJSONSFs/summaries/JME_2018_UL_jet_jerc.html)|`Summer19UL18_JRV2_MC_PtResolution_AK4PFchs`|
 
+---
 ### Jet energy correction
 Correct each Jet 4-vector using the information from `jet_jec_sf.txt` based on the pT and eta of the jet for each campaign. The text file is organised as follows:
 ```
@@ -14,6 +16,7 @@ In nanoAOD, the Jets are corrected by default, and hence the nominal SF is 1. Ho
 - pT bins : 
 - eta bins: `[-5.4, -5.0, -4.4, -4.0, -3.5, -3.0, -2.8, -2.6, -2.4, -2.2, -2.0, -1.8, -1.6, -1.4, -1.2, -1.0, -0.8, -0.6, -0.4, -0.2, 0.0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6, 1.8, 2.0, 2.2, 2.4, 2.6, 2.8, 3.0, 3.5, 4.0, 4.4, 5.0, 5.4]`
 
+---
 ### Jet energy resolution correction
 It requires two types of corrections to each Jet 4-vector. The first type is a scale factor in eta bins from `jet_jer_sf.txt`. This text file is organised as follows:.
 ```
