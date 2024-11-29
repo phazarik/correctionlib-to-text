@@ -5,7 +5,7 @@ Correctionlib is a library that provides a standardized interface for evaluating
 - [`corrections/electronsf`](https://github.com/phazarik/correctionlib-to-text/tree/main/corrections/electronsf)
 - [`corrections/muonsf`](https://github.com/phazarik/correctionlib-to-text/tree/main/corrections/muonsf)
 - [`corrections/jetsf`](https://github.com/phazarik/correctionlib-to-text/tree/main/corrections/jetsf)
--  [`/corrections/bjeteff`](https://github.com/phazarik/correctionlib-to-text/tree/main/corrections/bjeteff)
+-  [`corrections/bjeteff`](https://github.com/phazarik/correctionlib-to-text/tree/main/corrections/bjeteff)
 
 
 ### Required dependencies
