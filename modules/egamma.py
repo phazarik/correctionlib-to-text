@@ -66,13 +66,14 @@ def parse_electron_sf(filename, correction_name, campaign):
     # Now that the binning is calculated,
     #print(pt_edges)
     #print(eta_edges)
+    #print(phi_edges)
     correction_set = correctionlib.CorrectionSet.from_file(filename)
     correction = correction_set[correction_name]
     MAX_PT = 1500
     MIN_ETA = -2.5
     MAX_ETA = 2.5
-    MIN_PHI = -np.pi
-    MAX_PHI = np.pi
+    MIN_PHI = -3.1416
+    MAX_PHI = 3.1416
     
     #Given the pt and eta edges, loop over their midvalues.
     for eta_low, eta_high in zip(eta_edges[:-1], eta_edges[1:]):
