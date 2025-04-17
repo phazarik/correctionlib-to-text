@@ -92,16 +92,15 @@ def parse_jet_jer_sf(filename, correction_name, campaign):
     
     correction_set = correctionlib.CorrectionSet.from_file(filename)
     correction = correction_set[correction_name]
-    MAX_PT = 4000
+    MAX_PT = 6000
 
     for eta_low, eta_high in zip(eta_edges[:-1], eta_edges[1:]):
         eta = (eta_low + eta_high) / 2
 
         if 'Run3' in campaign:
             for pt_low, pt_high in zip(pt_edges[:-1], pt_edges[1:]):
-                if not np.isfinite(pt_low):   pt_low   = MAX_PT  if pt_low   == np.inf else 0
-                if not np.isfinite(pt_high):  pt_high  = MAX_PT  if pt_high  == np.inf else 0
-
+                if not np.isfinite(pt_high):   pt_high = MAX_PT if pt_high == np.inf else 0
+                
                 pt = (pt_low + pt_high) / 2
                 values_nom  = [eta, pt, 'nom']
                 values_up   = [eta, pt, 'up']
@@ -136,7 +135,7 @@ def parse_jet_jer_sf(filename, correction_name, campaign):
                 'eta_low' : eta_low,
                 'eta_high': eta_high,
                 'pt_low'  : 0,
-                'pt_high' : np.inf,
+                'pt_high' : MAX_PT,
                 'sfdown'  : sfdown,
                 'sf'      : sf,
                 'sfup'    : sfup

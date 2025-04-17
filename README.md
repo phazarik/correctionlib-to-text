@@ -1,12 +1,10 @@
 # Correctionlib to text
 
-Correctionlib is a library that provides a standardized interface for evaluating physics object correction factors and scale factors defined in JSON format [[see documentation](https://cms-nanoaod.github.io/correctionlib/)]. It supports python and C++ (that I know of). It returns correction parameters typically in bins of pT and eta of the physics objects. I designed this correctionlib-to-text converter for systems not compatible with correctionlib, where I flatten the information organised in json format and write down into text files with a pandas dataframe structure. These text files can be parsed easily into C++ or python based analysis framework. Instructions for each types of corrections are given in the respective directories:
+Correctionlib is a library that provides a standardized interface for evaluating physics object correction factors and scale factors defined in JSON format [[see documentation](https://cms-nanoaod.github.io/correctionlib/)]. It supports Python and C++ (that I know of). It returns correction parameters typically in bins of pT and eta of the physics objects. I designed this correctionlib-to-text converter for systems not compatible with correctionlib, where I flatten the information organized in JSON format and write it down into text files with a pandas dataframe structure. These text files can be parsed easily into C++ or Python-based analysis frameworks.
 
-- [`corrections/electronsf`](https://github.com/phazarik/correctionlib-to-text/tree/main/corrections/electronsf)
-- [`corrections/muonsf`](https://github.com/phazarik/correctionlib-to-text/tree/main/corrections/muonsf)
-- [`corrections/jetsf`](https://github.com/phazarik/correctionlib-to-text/tree/main/corrections/jetsf)
--  [`corrections/bjeteff`](https://github.com/phazarik/correctionlib-to-text/tree/main/corrections/bjeteff)
-
+### Important links
+- [Correction factors released by POGs](https://gitlab.cern.ch/cms-nanoAOD/jsonpog-integration) in JSON format (needs CERN user account)
+- [Summary of JSON files from POGs](https://cms-nanoaod-integration.web.cern.ch/commonJSONSFs/) (how to feed inputs)
 
 ### Required dependencies
 - correctionlib [can be installed with `conda install correctionlib`]
